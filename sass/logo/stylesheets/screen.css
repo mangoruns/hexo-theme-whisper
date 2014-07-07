@@ -1,0 +1,439 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 16, ../sass/screen.scss */
+.vico {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  background-color: #a6e22e;
+  border: 20px solid white;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 3px 3px 15px 5px #eeeeee;
+  -webkit-box-shadow: 3px 3px 15px 5px #eeeeee;
+  box-shadow: 3px 3px 15px 5px #eeeeee;
+}
+
+/* line 28, ../sass/screen.scss */
+.head {
+  position: relative;
+  width: 180px;
+  height: 100px;
+  margin: 80px auto;
+  border: 10px solid white;
+  -moz-border-radius: 120px 120px 0 0;
+  -webkit-border-radius: 120px;
+  border-radius: 120px 120px 0 0;
+}
+/* line 37, ../sass/screen.scss */
+.head:before, .head:after {
+  position: absolute;
+  top: -20px;
+  content: "";
+  height: 0;
+  width: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid white;
+}
+/* line 51, ../sass/screen.scss */
+.head:before {
+  left: 0;
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  -webkit-animation: 2s earl linear infinite;
+  -moz-animation: 2s earl linear infinite;
+  -o-animation: 2s earl linear infinite;
+  animation: 2s earl linear infinite;
+}
+@-webkit-keyframes earl {
+  /* line 58, ../sass/screen.scss */
+  .head:before 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 62, ../sass/screen.scss */
+  .head:before 20%  , 21%  {
+    border-left: 28px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  /* line 66, ../sass/screen.scss */
+  .head:before 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 70, ../sass/screen.scss */
+  .head:before 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+@-moz-keyframes earl {
+  /* line 58, ../sass/screen.scss */
+  .head:before 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 62, ../sass/screen.scss */
+  .head:before 20%  , 21%  {
+    border-left: 28px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  /* line 66, ../sass/screen.scss */
+  .head:before 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 70, ../sass/screen.scss */
+  .head:before 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+@-o-keyframes earl {
+  /* line 58, ../sass/screen.scss */
+  .head:before 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 62, ../sass/screen.scss */
+  .head:before 20%  , 21%  {
+    border-left: 28px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  /* line 66, ../sass/screen.scss */
+  .head:before 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 70, ../sass/screen.scss */
+  .head:before 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+@keyframes earl {
+  /* line 58, ../sass/screen.scss */
+  .head:before 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 62, ../sass/screen.scss */
+  .head:before 20%  , 21%  {
+    border-left: 28px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  /* line 66, ../sass/screen.scss */
+  .head:before 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 70, ../sass/screen.scss */
+  .head:before 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+/* line 77, ../sass/screen.scss */
+.head:after {
+  right: 0;
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  -webkit-animation: 2s earr linear infinite;
+  -moz-animation: 2s earr linear infinite;
+  -o-animation: 2s earr linear infinite;
+  animation: 2s earr linear infinite;
+}
+@-webkit-keyframes earr {
+  /* line 84, ../sass/screen.scss */
+  .head:after 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 88, ../sass/screen.scss */
+  .head:after 20%  , 21%  {
+    border-left: 20px solid transparent;
+    border-right: 28px solid transparent;
+  }
+  /* line 92, ../sass/screen.scss */
+  .head:after 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 96, ../sass/screen.scss */
+  .head:after 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+@-moz-keyframes earr {
+  /* line 84, ../sass/screen.scss */
+  .head:after 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 88, ../sass/screen.scss */
+  .head:after 20%  , 21%  {
+    border-left: 20px solid transparent;
+    border-right: 28px solid transparent;
+  }
+  /* line 92, ../sass/screen.scss */
+  .head:after 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 96, ../sass/screen.scss */
+  .head:after 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+@-o-keyframes earr {
+  /* line 84, ../sass/screen.scss */
+  .head:after 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 88, ../sass/screen.scss */
+  .head:after 20%  , 21%  {
+    border-left: 20px solid transparent;
+    border-right: 28px solid transparent;
+  }
+  /* line 92, ../sass/screen.scss */
+  .head:after 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 96, ../sass/screen.scss */
+  .head:after 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+@keyframes earr {
+  /* line 84, ../sass/screen.scss */
+  .head:after 0%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 88, ../sass/screen.scss */
+  .head:after 20%  , 21%  {
+    border-left: 20px solid transparent;
+    border-right: 28px solid transparent;
+  }
+  /* line 92, ../sass/screen.scss */
+  .head:after 21%  , 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  /* line 96, ../sass/screen.scss */
+  .head:after 100%  {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+/* line 104, ../sass/screen.scss */
+.body {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: -200px auto;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 160px solid white;
+}
+
+/* line 115, ../sass/screen.scss */
+.empty {
+  position: relative;
+  left: -15px;
+  width: 180px;
+  height: 100px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 160px solid #a6e22e;
+}
+
+/* line 126, ../sass/screen.scss */
+.foot {
+  position: relative;
+  left: 11px;
+  top: 160px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+/* line 134, ../sass/screen.scss */
+.foot li {
+  display: inline-block;
+  width: 42px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  margin-right: -8px;
+}
+/* line 142, ../sass/screen.scss */
+.foot li:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+  border-bottom: 40px solid white;
+}
+
+/* line 156, ../sass/screen.scss */
+.eye {
+  position: relative;
+  top: 80px;
+  left: -3px;
+  width: 18px;
+  height: 36px;
+  z-index: 99;
+  float: left;
+  margin-left: 50px;
+  display: inline;
+  background-color: white;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: 6s eyeroll linear infinite;
+  -moz-animation: 6s eyeroll linear infinite;
+  -o-animation: 6s eyeroll linear infinite;
+  animation: 6s eyeroll linear infinite;
+}
+
+@-webkit-keyframes eyeroll {
+  /* line 173, ../sass/screen.scss */
+  0%,15% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+
+  /* line 177, ../sass/screen.scss */
+  25%,40% {
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+  }
+
+  /* line 181, ../sass/screen.scss */
+  50%,65% {
+    -webkit-transform: translate(200%, 0);
+    transform: translate(200%, 0);
+  }
+
+  /* line 185, ../sass/screen.scss */
+  75%,90% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 189, ../sass/screen.scss */
+  100% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+}
+@-moz-keyframes eyeroll {
+  /* line 173, ../sass/screen.scss */
+  0%,15% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+
+  /* line 177, ../sass/screen.scss */
+  25%,40% {
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+  }
+
+  /* line 181, ../sass/screen.scss */
+  50%,65% {
+    -webkit-transform: translate(200%, 0);
+    transform: translate(200%, 0);
+  }
+
+  /* line 185, ../sass/screen.scss */
+  75%,90% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 189, ../sass/screen.scss */
+  100% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+}
+@-o-keyframes eyeroll {
+  /* line 173, ../sass/screen.scss */
+  0%,15% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+
+  /* line 177, ../sass/screen.scss */
+  25%,40% {
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+  }
+
+  /* line 181, ../sass/screen.scss */
+  50%,65% {
+    -webkit-transform: translate(200%, 0);
+    transform: translate(200%, 0);
+  }
+
+  /* line 185, ../sass/screen.scss */
+  75%,90% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 189, ../sass/screen.scss */
+  100% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+}
+@keyframes eyeroll {
+  /* line 173, ../sass/screen.scss */
+  0%,15% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+
+  /* line 177, ../sass/screen.scss */
+  25%,40% {
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+  }
+
+  /* line 181, ../sass/screen.scss */
+  50%,65% {
+    -webkit-transform: translate(200%, 0);
+    transform: translate(200%, 0);
+  }
+
+  /* line 185, ../sass/screen.scss */
+  75%,90% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 189, ../sass/screen.scss */
+  100% {
+    -webkit-transform: translate(-200%, 0);
+    transform: translate(-200%, 0);
+  }
+}

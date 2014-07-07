@@ -1,0 +1,206 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "partials/mixin";
+
+$primary-color: #38b49d;
+$line-color: #fff;
+$line-width: 6px;
+$shadow-color: #eee;
+$canvas: 220px;
+$canvas-width: 10px;
+$canvas-radius: 20%;
+$circle: 50%;
+$head-width: 100px;
+$body-width: $head-width;
+$foot-width: $head-width;
+$body-height: 80px;
+$single-foot: 20px;
+$eye-width: 9px;
+
+// shap: circle with shadow
+.vico{
+	position: relative;
+	width: $canvas;
+	height: $canvas;
+	overflow: hidden;
+
+	background-color: $primary-color;
+	border: $canvas-width solid $line-color;
+	@include border-radius($canvas-radius);
+	@include box-shadow(5px 5px 0 4px $shadow-color);
+}
+
+.head{
+	position: relative;
+	width: $head-width;
+	height: $head-width / 2;
+	margin: ($head-width / 2 - 10) auto;
+
+	border: ($line-width - 1) solid $line-color;
+	@include border-radius(($head-width + 10) ($head-width + 10) 0 0);
+
+	&:before,&:after{
+		position: absolute;
+		top: -10px;
+
+		content: "";
+		height: 0;
+		width: 0;
+
+		border-left: ($line-width * 2) solid transparent;
+		border-right: ($line-width * 2) solid transparent;
+		border-bottom: 20px solid $line-color;
+
+	}
+
+	&:before{
+		left: 0;
+
+		@include transform(rotate(-35deg));
+		@include animation(1.5s earl linear infinite);
+	}
+
+	&:after{
+		right: 0;
+
+		@include transform(rotate(35deg));
+		@include animation(1.5s earr linear infinite);
+	}
+
+}
+
+@include keyframes(earl) {
+      0% {
+        border-left: ($line-width * 2) solid transparent;
+        border-right: ($line-width * 2) solid transparent;
+      }
+      20%,21% {
+        border-left: ($line-width * 2 + 3) solid transparent;
+        border-right: ($line-width * 2 - 5) solid transparent;
+      }
+      21%,100%{
+        border-left: ($line-width * 2) solid transparent;
+        border-right: ($line-width * 2) solid transparent;
+      }
+      100%{
+        border-left: ($line-width * 2) solid transparent;
+        border-right: ($line-width * 2) solid transparent;
+      }
+}
+
+@include keyframes(earr) {
+      0% {
+        border-left: ($line-width * 2) solid transparent;
+        border-right: ($line-width * 2) solid transparent;
+      }
+      20%,21% {
+        border-left: ($line-width * 2 - 5) solid transparent;
+        border-right: ($line-width * 2 + 3) solid transparent;
+      }
+      21%,100%{
+        border-left: ($line-width * 2) solid transparent;
+        border-right: ($line-width * 2) solid transparent;
+      }
+      100%{
+        border-left: ($line-width * 2) solid transparent;
+        border-right: ($line-width * 2) solid transparent;
+      }
+}
+
+.body{
+	position: relative;
+	width: ($body-width + 10);
+	height: ($body-width / 2);
+	margin: -$body-width auto;
+
+	border-left: $line-width solid transparent;
+	border-right: $line-width solid transparent;
+	border-bottom: $body-height solid $line-color;
+}
+
+.empty{
+	position:relative;
+	left:-1px;
+	width: $body-width;
+	height: ($body-width / 2);
+
+	border-left: $line-width solid transparent;
+	border-right: $line-width solid transparent;
+	border-bottom: $body-height solid $primary-color;
+}
+
+.foot{
+	position: relative;
+	left: 6px;
+	top: $body-height;
+	width: ($foot-width + 20);
+	margin: 0 auto;
+}
+
+.foot li{
+	display: inline-block;
+	width: ($single-foot + 2);
+	height: $single-foot;
+	padding:0;
+	margin: 0;
+	margin-right: -4px;
+
+	&:after{
+		position: absolute;
+		top: 0;
+
+		content: "";
+		width: 0;
+		height: 0;
+
+		border-left: ($single-foot / 2) solid transparent;
+		border-right: ($single-foot / 2) solid transparent;
+		border-bottom: $single-foot solid $line-color;
+	}
+}
+
+.eye{
+	position: relative;
+	top: 40px;
+	left: -1px;
+	width: $eye-width;
+	height: ($eye-width * 2);
+	z-index: 99;
+	float: left;
+	margin-left: ($head-width / 4 + $line-width / 2);
+	display: inline;
+
+	background-color: $line-color;
+	@include border-radius($circle);
+	@include animation(6s eyeroll linear infinite)
+}
+
+@include keyframes(eyeroll) {
+      0%,15%{
+        -webkit-transform: translate(-200%, 0);
+        transform: translate(-200%, 0);
+      }
+      25%,40%{
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+      }
+      50%,65% {
+        -webkit-transform: translate(200%, 0);
+        transform: translate(200%, 0);
+      }
+      75%,90%{
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      100%{
+        -webkit-transform: translate(-200%, 0);
+        transform: translate(-200%, 0);
+      }
+}

@@ -1,0 +1,193 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "partials/mixin";
+
+$primary-color: #a6e22e;
+$line-color: #fff;
+$line-width: 25px;
+$shadow-color: #eee;
+$canvas: 400px;
+
+// shap: circle with shadow
+.vico{
+	position: relative;
+	width: $canvas;
+	height: $canvas;
+	overflow: hidden;
+
+	background-color: $primary-color;
+	border: 20px solid $line-color;
+	@include border-radius(50%);
+	@include box-shadow(3px 3px 15px 5px $shadow-color);
+}
+
+.head{
+	position: relative;
+	width: 180px;
+	height:100px;
+	margin: 80px auto;
+
+	border: 10px solid $line-color;
+	@include border-radius(120px 120px 0 0);
+
+	&:before,&:after{
+		position: absolute;
+		top: -20px;
+
+		content: "";
+		height: 0;
+		width: 0;
+
+		border-left: $line-width solid transparent;
+		border-right: $line-width solid transparent;
+		border-bottom: 40px solid $line-color;
+
+	}
+
+	&:before{
+		left: 0;
+
+		@include transform(rotate(-35deg));
+		@include animation(2s earl linear infinite);
+
+		@include keyframes(earl) {
+		      0% {
+		        border-left: $line-width solid transparent;
+		        border-right: $line-width solid transparent;
+		      }
+		      20%,21% {
+		        border-left: ($line-width + 3) solid transparent;
+		        border-right: ($line-width - 5) solid transparent;
+		      }
+		      21%,100%{
+		        border-left: $line-width solid transparent;
+		        border-right: $line-width solid transparent;
+		      }
+		      100%{
+		        border-left: $line-width solid transparent;
+		        border-right: $line-width solid transparent;
+		      }
+		}
+	}
+
+	&:after{
+		right: 0;
+
+		@include transform(rotate(35deg));
+		@include animation(2s earr linear infinite);
+
+		@include keyframes(earr) {
+		      0% {
+		        border-left: $line-width solid transparent;
+		        border-right: $line-width solid transparent;
+		      }
+		      20%,21% {
+		        border-left: ($line-width - 5) solid transparent;
+		        border-right: ($line-width + 3) solid transparent;
+		      }
+		      21%,100%{
+		        border-left: $line-width solid transparent;
+		        border-right: $line-width solid transparent;
+		      }
+		      100%{
+		        border-left: $line-width solid transparent;
+		        border-right: $line-width solid transparent;
+		      }
+		}
+	}
+}
+
+.body{
+	position: relative;
+	width: 200px;
+	height: 100px;
+	margin: -200px auto;
+
+	border-left: $line-width solid transparent;
+	border-right: $line-width solid transparent;
+	border-bottom: 160px solid $line-color;
+}
+
+.empty{
+	position:relative;
+	left:-15px;
+	width:180px;
+	height:100px;
+
+	border-left: $line-width solid transparent;
+	border-right: $line-width solid transparent;
+	border-bottom: 160px solid $primary-color;
+}
+
+.foot{
+	position: relative;
+	left: 11px;
+	top: 160px;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.foot li{
+	display: inline-block;
+	width: 42px;
+	height: 40px;
+	padding:0;
+	margin: 0;
+	margin-right: -8px;
+
+	&:after{
+		position: absolute;
+		top: 0;
+
+		content: "";
+		width: 0;
+		height: 0;
+
+		border-left: 19px solid transparent;
+		border-right: 19px solid transparent;
+		border-bottom: 40px solid $line-color;
+	}
+}
+
+.eye{
+	position: relative;
+	top: 80px;
+	left: -3px;
+	width:18px;
+	height: 36px;
+	z-index: 99;
+	float: left;
+	margin-left: 50px;
+	display: inline;
+
+	background-color: $line-color;
+	@include border-radius(50%);
+	@include animation(6s eyeroll linear infinite)
+}
+
+@include keyframes(eyeroll) {
+      0%,15%{
+        -webkit-transform: translate(-200%, 0);
+        transform: translate(-200%, 0);
+      }
+      25%,40%{
+        -webkit-transform: translate(0, -100%);
+        transform: translate(0, -100%);
+      }
+      50%,65% {
+        -webkit-transform: translate(200%, 0);
+        transform: translate(200%, 0);
+      }
+      75%,90%{
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      100%{
+        -webkit-transform: translate(-200%, 0);
+        transform: translate(-200%, 0);
+      }
+}
