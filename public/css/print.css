@@ -1,4 +1,11 @@
-
+.motto{
+  width: 520px;
+  margin: 0 auto;
+}
+.toc,
+.toc-child{
+  list-style: none;
+}
 .vico {
   position: relative;
   padding-right: 62%;
