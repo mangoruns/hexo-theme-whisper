@@ -1,26 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[❤碎碎念]]></title>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
   
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2014-07-08T03:05:35.033Z</updated>
-  <id>http://yoursite.com/</id>
+  <title>❤碎碎念 › multipart/form-data</title>
+  <meta name="author" content="Vico">
   
-  <author>
-    <name><![CDATA[Vico]]></name>
-    
-  </author>
+  <meta name="description" content="几种常见的Content-Type类型
+
+
+
+值
+描述
+
+
+
+
+application/x-www-form-urlencoded
+在发送前编码所有字符（默认）
+
+
+multipart/form-data
+不对字符编码。在使用包含文件上传控件的表单时，必须使用该值。
+
+
+text/plain
+空格转">
   
-  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
-  <entry>
-    <title><![CDATA[multipart/form-data]]></title>
-    <link href="http://yoursite.com/2014/07/08/form-data/"/>
-    <id>http://yoursite.com/2014/07/08/form-data/</id>
-    <published>2014-07-08T03:03:42.000Z</published>
-    <updated>2014-07-08T03:03:42.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="几种常见的Content-Type类型">几种常见的Content-Type类型</h2>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="multipart/form-data"/>
+  <meta property="og:site_name" content="❤碎碎念"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="❤碎碎念" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/print.css" media="screen" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.readingTime.js"></script>
+    <script type="text/javascript" src="/js/jquery.pjax.js"></script>
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32857089-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+
+<body>
+  <header id="header"><div class="meta inner">
+  <h1><a data-pjax href="/">❤碎碎念</a></h1>
+  <h2><a data-pjax href="/"></a></h2>
+  <nav id="main-nav">
+    <ul>
+      
+      <li><a data-pjax href="/archives">Archive</a></li>
+      
+      <li><a data-pjax href="/about.html">About</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+</div>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">multipart/form-data</h1>
+  
+
+      
+      <time datetime="2014-07-08T03:03:42.000Z">Jul 8 2014</time>
+      
+    </header>
+    <div class="entry">
+     <!--  
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#几种常见的Content-Type类型"><span class="toc-number">1.</span> <span class="toc-text">几种常见的Content-Type类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#multipart/form-data"><span class="toc-number">2.</span> <span class="toc-text">multipart/form-data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FormDate"><span class="toc-number">3.</span> <span class="toc-text">FormDate</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#构造函数"><span class="toc-number">3.1.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-number">3.2.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#兼容"><span class="toc-number">3.3.</span> <span class="toc-text">兼容</span></a></li><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Desktop"><span class="toc-number">3.3.1.</span> <span class="toc-text">Desktop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mobile"><span class="toc-number">3.3.2.</span> <span class="toc-text">Mobile</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#使用FormData对象"><span class="toc-number">3.4.</span> <span class="toc-text">使用FormData对象</span></a></li><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建一个FormData对象"><span class="toc-number">3.4.1.</span> <span class="toc-text">创建一个FormData对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用FormData对象发送文件"><span class="toc-number">3.4.2.</span> <span class="toc-text">使用FormData对象发送文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用jQuery来发送FormData"><span class="toc-number">3.4.3.</span> <span class="toc-text">使用jQuery来发送FormData</span></a></li></ol>
+          -->
+      
+        <h2 id="几种常见的Content-Type类型">几种常见的Content-Type类型</h2>
 <table>
 <thead>
 <tr>
@@ -339,13 +414,88 @@ $.ajax({
   */</span>  
   processData:<span class="keyword">false</span>  
 });
-</pre></td></tr></table></figure>]]></content>
+</pre></td></tr></table></figure>
+      
+    </div>
     
-    
-      <category term="formData" scheme="http://yoursite.com/tags/formData/"/>
-    
-      <category term="HTTP" scheme="http://yoursite.com/categories/HTTP/"/>
-    
-  </entry>
+    <footer>
+      <div class="alignleft">
+      
   
-</feed>
+  <div class="categories">
+    <a href="/categories/HTTP/">HTTP</a>
+  </div>
+
+      
+  
+  <div class="tags">
+    <a href="/tags/formData/">formData</a>
+  </div>
+
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+    
+  </div>
+</article>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.post').readingTime();
+  });
+</script>
+
+
+<section id="comment">
+  
+            <!-- Duoshuo Comment BEGIN -->
+            <div class="ds-thread"></div>
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"vico"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = 'http://static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+            <!-- Duoshuo Comment END -->
+      
+  
+</section>
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="inner"><div class="alignleft">
+  <p>
+  
+    &copy; 2014 Vico
+  
+  </p>
+  <p>
+    <a href="https://github.com/mangoruns/hexo-theme-whisper">whisper</a> Theme By <a href="http://vico.me" >vico</a>
+  </p>
+
+</div>
+<div class="clearfix"></div></div></footer>
+  <script type="text/javascript">
+
+//      PJAX init
+$(document).pjax('a[data-pjax]', '#content', {fragment: '#content',timeout: 10000});
+$(document).on({
+    'pjax:click': function() {
+        NProgress.start();
+    },
+    'pjax:start': function() {
+    },
+    'pjax:end': function() {
+        NProgress.done();
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -203,8 +203,8 @@ article .entry pre {
 }
 article .entry code {
   background: #eee;
-  color: #666;
-  padding: 0 5px;
+  color: #c7254e;
+  padding: 1px 5px;
   margin: 0 2px;
   border: 1px solid #ddd;
   -webkit-border-radius: 3px;
@@ -590,6 +590,14 @@ figure.highlight pre {
 figure.highlight table {
   margin-top: 0;
   border-spacing: 0;
+  margin-bottom: 0;
+}
+figure.highlight table td {
+  padding: 0;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: middle;
+  border-top: none;
 }
 figure.highlight .gutter {
   color: #999;
