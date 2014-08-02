@@ -1,0 +1,35 @@
+<script type="text/javascript">
+
+function toggleDuoshuoComments(container) {
+    var url = window.location.pathname,
+        id;
+    if (url == "/index.html" || url == "/" || url == "") {
+        id = 0
+        url = "/index.html";
+    } else {
+        id = url.match(/\w+/g).join('');
+    }
+    var el = document.createElement('div'); //该div不需要设置class="ds-thread"
+    el.setAttribute('data-thread-key', id); //必选参数
+    el.setAttribute('data-url', url); //必选参数
+    el.setAttribute('data-author-key', 'vico'); //可选参数
+    DUOSHUO.EmbedThread(el);
+    jQuery(container).append(el);
+};
+
+//      PJAX init
+$(document).pjax('a[data-pjax]', '#content', {fragment: '#content',timeout: 10000});
+$(document).on({
+    'pjax:click': function() {
+        NProgress.start();
+    },
+    'pjax:start': function() {
+    },
+    'pjax:end': function() {
+        NProgress.done();
+        toggleDuoshuoComments("#comment")
+    }
+});
+// toggleDuoshuoComments("#comment");
+</script>
+  <script type="text/javascript" src="<%- config.root %>js/main.js"></script>
