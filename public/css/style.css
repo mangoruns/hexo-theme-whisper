@@ -79,21 +79,22 @@ a:hover {
 #header {
   height: 45px;
   background: #bb3131;
-  background: -webkit-linear-gradient(top, #c63a3a 0, #c43837 29%, #c13635 55%, #bd3232 55%, #ba3030 77%, #b32b2b 100%);
-  background: -moz-linear-gradient(top, #c63a3a 0, #c43837 29%, #c13635 55%, #bd3232 55%, #ba3030 77%, #b32b2b 100%);
-  background: -o-linear-gradient(top, #c63a3a 0, #c43837 29%, #c13635 55%, #bd3232 55%, #ba3030 77%, #b32b2b 100%);
-  background: -ms-linear-gradient(top, #c63a3a 0, #c43837 29%, #c13635 55%, #bd3232 55%, #ba3030 77%, #b32b2b 100%);
-  background: linear-gradient(to bottom, #c63a3a 0, #c43837 29%, #c13635 55%, #bd3232 55%, #ba3030 77%, #b32b2b 100%);
+  background: -webkit-linear-gradient(top, #fff, #f2f2f2);
+  background: -moz-linear-gradient(top, #fff, #f2f2f2);
+  background: -o-linear-gradient(top, #fff, #f2f2f2);
+  background: -ms-linear-gradient(top, #fff, #f2f2f2);
+  background: linear-gradient(to bottom, #fff, #f2f2f2);
   -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.2);
   box-shadow: 0 1px 10px rgba(0,0,0,0.2);
 }
 #header h1 {
   font-weight: normal;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 45px;
 }
 #header h1 a {
-  color: #f5f5f5;
+  color: #38b49d;
+  text-decoration: none;
 }
 #header h2 {
   display: none;
@@ -113,14 +114,16 @@ a:hover {
 }
 #main-nav ul li {
   float: left;
-  margin-left: 15px;
   line-height: 45px;
 }
 #main-nav ul li a {
-  color: #ddd;
+  color: #777;
+  padding: 10px 15px 10px;
+  text-shadow: 0 1px 0 #fff;
+  text-decoration: none;
 }
 #main-nav ul li a:hover {
-  color: #fff;
+  color: #333;
 }
 article {
   position: relative;
@@ -200,8 +203,8 @@ article .entry pre {
 }
 article .entry code {
   background: #eee;
-  color: #666;
-  padding: 0 5px;
+  color: #c7254e;
+  padding: 1px 5px;
   margin: 0 2px;
   border: 1px solid #ddd;
   -webkit-border-radius: 3px;
@@ -587,6 +590,14 @@ figure.highlight pre {
 figure.highlight table {
   margin-top: 0;
   border-spacing: 0;
+  margin-bottom: 0;
+}
+figure.highlight table td {
+  padding: 0;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: middle;
+  border-top: none;
 }
 figure.highlight .gutter {
   color: #999;
