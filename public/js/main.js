@@ -1,4 +1,4 @@
-$.ready(function(){
+$(document).ready(function(){
 
 	// click effect
 	$('.vico').on('click',function(e){
@@ -12,7 +12,7 @@ $.ready(function(){
 		var setY = parseInt(clickY);
 
 		$(self).find('svg').remove();
-		$(self).append('<svg><circle cx="'+setX+'" cy="'+setY+'" r="'+r+'"></circle></svg>');
+		$(self).append('<svg><circle cx="'+setX+'" cy="'+setY+'" r="'+0+'"></circle></svg>');
 
 		setTimeout(function(){
 			var c = $(self).find("circle");
@@ -27,4 +27,4 @@ $.ready(function(){
 			})
 		})
 	})
-})
+}())

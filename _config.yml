@@ -87,7 +87,9 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: github
+  repository: git@github.com:mangoruns/hexo-theme-whisper.git
+  branch: master
 
 plugins:
 - hexo-generator-feed
