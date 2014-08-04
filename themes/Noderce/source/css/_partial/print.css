@@ -16,6 +16,10 @@ circle {
   fill: rgba(255, 255, 255, 0.1);
 }
 
+.archive{
+  min-height: 200px;
+}
+
 .motto{
   width: 520px;
   margin: 50px auto;

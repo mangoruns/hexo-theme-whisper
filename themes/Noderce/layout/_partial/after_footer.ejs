@@ -1,5 +1,5 @@
 <script type="text/javascript">
-
+// duoshuo
 function toggleDuoshuoComments(container) {
     var url = window.location.pathname,
         id;
@@ -17,7 +17,7 @@ function toggleDuoshuoComments(container) {
     jQuery(container).append(el);
 };
 
-//      PJAX init
+//  PJAX init
 $(document).pjax('a[data-pjax]', '#content', {fragment: '#content',timeout: 10000});
 $(document).on({
     'pjax:click': function() {
@@ -30,5 +30,4 @@ $(document).on({
         toggleDuoshuoComments("#comment")
     }
 });
-// toggleDuoshuoComments("#comment");
 </script>

@@ -28,22 +28,14 @@
   <% if (page.keywords){ %><meta name="keywords" content="<%= page.keywords %>"><% } %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <% if (page.title){ %><meta property="og:title" content="<%= page.title %>"/><% } %>
-  <meta property="og:site_name" content="<%= config.title %>"/>
-
-  <% if(page.cover) { %>
-    <meta property="og:image" content="<%= page.cover %>" />
-  <% } else { %>
-    <meta property="og:image" content="<%= config.cover %>"/>
-  <% } %>
-
   <link href="<%- config.root %>favicon.png" rel="icon">
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
-  <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="<%- config.root %>js/jquery.readingTime.js"></script>
   <script type="text/javascript" src="<%- config.root %>js/jquery.pjax.js"></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+  <script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+  <script type="text/javascript" src="http://static.duoshuo.com/embed.js"></script>
   <script>var duoshuoQuery = {short_name:"vico"};</script>
-  <script src="http://static.duoshuo.com/embed.js"></script>
 </head>
