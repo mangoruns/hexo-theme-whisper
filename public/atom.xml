@@ -4,7 +4,11 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
+<<<<<<< HEAD
   <updated>2014-07-08T03:05:35.033Z</updated>
+=======
+  <updated>2014-08-04T13:02:17.882Z</updated>
+>>>>>>> c894e9b1808147143cdd6ed1c2a29ae6cb2c8a03
   <id>http://yoursite.com/</id>
   
   <author>
