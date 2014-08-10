@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Gulp</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body class="coverflow">
+    <article>
+      <section>
+        <h1>Gulp</h1>
+        <h3>Gulp is an intuitive, code-over-configuration, streaming build system. It’s fast.</h3>
+      </section>
+      <section>
+        <h1>Start</h1>
+        <h3>Installation</h3>
+        <pre><code class="language-javascript">// Install gulp globally
+npm install -g gulp
+
+// Install gulp in your project devDependencies
+npm install --save-dev gulp
+</code></pre>
+      </section>
+      <section>
+        <h3>Create a <a href="#">gulpfile.js</a></h3>
+        <pre><code class="language-javascript">var gulp = require('gulp');
+
+gulp.task('default', function() {
+  // place code for your default task here
+});
+</code></pre>
+      </section>
+      <section>
+        <h3>Run gulp</h3>
+        <pre><code class="language-javascript">gulp
+
+// To run individual tasks
+gulp [task] [othertask]
+</code></pre>
+      </section>
+      <section>
+        <h3 class="bullet">Gulp 仅有 4 个方法就能组合出你需要的任务流程</h3>
+        <ul>
+          <li><a>gulp.task(‘taskname’, [‘deps’], fn);</a></li>
+          <li><a>gulp.watch(‘files.js’, [‘tasks’], fn);</a></li>
+          <li><a>gulp.src([’files.js’]);</a></li>
+          <li><a>gulp.dest(’endpoint.js’);</a></li>
+        </ul>
+      </section>
+      <section>
+        <h1>Example</h1>
+        <pre><code class="language-javascript">// 引入 gulp
+var gulp = require('gulp');
+
+// 引入 Plugins
+var compass = require('gulp-compass');
+</code></pre>
+      </section>
+      <section>
+        <pre><code class="language-javascript">// 创建 Compass 任务
+gulp.task('compass', function() {
+  gulp.src('./src/*.scss')
+  .pipe(compass({
+    config_file: './config.rb',
+    css: 'stylesheets',
+    sass: 'sass'
+  }))
+  .pipe(gulp.dest('app/assets/temp'));
+});
+</code></pre>
+      </section>
+      <section>
+        <pre><code class="language-javascript">// 创建 Watch 任务
+gulp.task('watch', function() {
+  gulp.watch('./src/*.scss', ['compass']);
+});
+</code></pre>
+      </section>
+      <section>
+        <pre><code class="language-javascript">// 默认任务
+gulp.task('default', ['compass','watch']);
+</code></pre>
+      </section>
+      <section>
+        <h1 class="bullet">CoreDesign</h1>
+        <ul class="center">
+          <li><a>Based on Node Streams API</a></li>
+          <li>Gulp allows you to input your source file(s), pipe them through a bunch of plugins and get an output at the end, rather than configuring each plugin with an input and output</li>
+        </ul>
+      </section>
+      <section>
+        <h1 class="bullet">Stream</h1>
+        <pre><code class="language-javascript">gulp.src('*.js') ====================> READ
+        .pipe( doSomething() )
+        .pipe( ... )
+        .pipe( ... )
+        .pipe( ... )
+        .pipe(gulp.dist('./bin')); =========> WRITE
+        </code></pre>
+      </section>
+      <section>
+        <h3><a href="#">Grunt</a> VS <a href="#">Gulp</a></h3>
+      </section>
+      <section>
+        <h3><a href="#">Grunt</a></h3><img src="http://gtms01.alicdn.com/tps/i1/TB1ctH9FVXXXXX8XVXXhBfk3pXX-963-712.png" style="width:450px;"/>
+      </section>
+      <section>
+        <h3><a href="#">Gulp</a></h3><img src="http://gtms02.alicdn.com/tps/i2/TB1l4QXFVXXXXcGXFXXDjCOJVXX-783-522.png" style="width:450px;"/>
+      </section>
+      <section><img src="http://gtms02.alicdn.com/tps/i2/TB1k97dFVXXXXbLXpXXbLRa9VXX-661-367.png" style="width:500px;"/></section>
+      <section>
+        <h1>Q&A</h1>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
